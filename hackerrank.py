@@ -15,3 +15,15 @@ def add(str1):
 
 str1="sleep"
 print(add(str1))
+# infy 38
+r,c=map(int,input().split())
+l=[]
+for i in range(0,r):
+    n=[]
+    for j in range(0,c):
+        temp=str(i)+','+str(j)
+        n.append(temp)
+    l.append(n)
+print("[",end="")
+print(*l,sep=',\n',end="")
+print("]")
