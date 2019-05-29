@@ -52,3 +52,38 @@ def create_new_dictionary(prices):
 prices=input()
 print(create_new_dictionary(prices))
 -----------------------------------------------------------------------------------------------
+ # balanced brackets
+    
+    def valid(l,r):
+    if(l=='(' and r==')'):
+        return True 
+    if(l=='[' and r==']'):
+        return True
+    if(l=='{'and r=='}'):
+        return True 
+    return False
+def nest(s):
+    stack=[] 
+    for sym in s:
+        if (sym == '[' or sym == '{' or sym == '('):
+            stack.append(sym) 
+        else:
+            if len(stack)==0:
+                return False
+            last=stack.pop()
+            if not valid(last,sym):
+                return False
+            
+    if (len(stack)!=0):
+        return False
+    return True
+
+N=int(input())
+for i in range(N):
+    s=input()
+    if nest(s):
+        print("YES")
+    else:
+        print("NO")
+
+___________________________________________________________________________________________________
