@@ -1,4 +1,5 @@
-#infy 46
+                                  test 1
+#infy 46                     
 
 number=list(map(int,input().split()))
 print(0,end=" ")
@@ -85,4 +86,71 @@ for i in range(N):
     else:
         print("NO")
 
-___________________________________________________________________________________________________
+____________________________________test 2__________________________________________________________
+# infy 4
+def find(num):
+    for i in range(0,4):
+        if(num[i]==9):
+            return True
+    return False
+num=list(map(int,input().split()))
+print(find(num))
+_________________________________________________________________________________________________________
+#infy 5
+def countdigits(s):
+    c=[]
+    l1=0
+    l2=0
+    for i in s:
+        if(i>="a" and i<="z"):
+            l1+=1
+        elif(i>="A" and i<="Z"):
+            l1+=1
+        elif(i>="0" and i<="9"):
+            l2+=1
+    c.append(l1)
+    c.append(l2)
+    return c
+s=input()
+print(countdigits(s))
+_________________________________________________________________________________________________________
+# infy 6
+def check(l):
+    for i in range(0,len(l)-1,1):
+        if(l[i]==1 and l[i+1]==2 and l[i+2]==3):
+            return True
+    return False
+        
+             
+l=list(map(int,input().split()))
+print(check(l))
+__________________________________________________________________________________________________________
+# infy 29
+def exchange(l):
+    m=[]
+    for i in range(len(l)-1,len(l)//2-1,-1):
+        m.append(l[i])
+    for i in range(0,len(l)//2):
+        m.append(l[i])
+    return m
+l=list(map(int,input().split()))
+print(*exchange(l))
+____________________________________________________________________________________________________________________
+# infy 31
+
+def sum(l,n):
+    a=len(l)
+    r=0
+    for i in range(1,a-1):
+        if(l[i-1]!=n and l[i+1]!=n and l[i]!=n):
+            r+=l[i]
+    if(l[1]!=n and l[0]!=n):
+        r+=l[0]
+    if(l[a-2]!=n and l[a-1]!=n):
+        r+=l[a-1]
+    return r
+
+l=list(map(int,input().split()))
+n=int(input())
+print(sum(l,n))
+_________________________________________________________________________________________________________________________
