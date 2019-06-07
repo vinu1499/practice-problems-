@@ -154,3 +154,117 @@ l=list(map(int,input().split()))
 n=int(input())
 print(sum(l,n))
 _________________________________________________________________________________________________________________________
+                                            INFYTEST 6  IMPORTANT
+
+#numbers in set infy21
+def check_numbers(num1,num2):
+    num_list=set()
+    for i in range(num1,num2+1):
+        for j in range(num1,num2+1):
+            if(i%j==0 and i not in num_list and i!=j):
+                num_list.add(i)
+    count=len(num_list)
+    return [num_list,count]
+num1,num2=map(int,input().split())
+print(check_numbers(num1, num2))
+
+# sum of digits
+n=int(input())
+prod=1
+while(n!=0):
+    rem=n%10
+    prod=prod*rem
+    n=n//10
+print(prod)
+_______________________________________________
+#reverse of number in c
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    long n;
+    scanf("%ld",&n);
+    int m=n;
+    long sum=0;
+    int rem;
+    while(n>0)
+    {
+        rem=n%10;
+        sum=sum*10 + rem;
+        n=n/10;
+    }
+    printf("%ld",sum);
+    return 0;
+}
+
+# amstrong or not
+
+n=int(input())
+m=len(str(n))
+sum=0
+rev=n
+while(n!=0):
+    rem=n%10
+    sum=sum + rem**m
+    n=n//10
+if(sum==rev):
+    print("Yes")
+else:
+    print("No")
+
+# prime or not in c
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n;
+    scanf("%d",&n);
+    int i;
+    int c=0;
+    for(i=2;i<n;i++)
+    {
+        if(n%i==0)
+            c+=1;
+    }
+    if(c==0){
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+    return 0;
+}
+
+# fiboncci series in c
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main() {
+
+    int num;
+    scanf("%d", &num);
+    int a=0;
+    int b=1,c;  
+    for(int i=1;i<=num;i++)
+    {     
+        printf("%d ",a);
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    
+    return 0;
+}
+
