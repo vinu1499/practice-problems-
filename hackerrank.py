@@ -267,4 +267,34 @@ int main() {
     
     return 0;
 }
+_______________________________________________________________________________________________________________________
+                                   inty test 6 
+  ## making anagram
+  import math
+import os
+import random
+import re
+import sys
+
+# Complete the makingAnagrams function below.
+def makingAnagrams(s1, s2):
+    d=len(s1)+len(s2)
+    c=0
+    for i in s1:
+        if(i in s2):
+            a=s1.count(i)
+            b=s2.count(i)
+            if(a>b):
+                e=b
+            else:
+                e=a
+            c+=e+e
+            s1=s1.replace(i,'')
+            s2=s2.replace(i,'')
+    print(d-c)
+
+s1 = input()
+s2 = input()
+makingAnagrams(s1, s2)
+
 
